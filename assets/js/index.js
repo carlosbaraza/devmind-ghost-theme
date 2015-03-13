@@ -20,6 +20,10 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        // Inject the SVG inline markup instead of the SVG image
+        SVGInjector($(".cover img"));
+        SVGInjector($(".blog-logo img"));
+
     });
 
     // Arctic Scroll by Paul Adam Davis

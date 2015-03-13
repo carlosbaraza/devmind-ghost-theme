@@ -2,19 +2,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      id="bkg" viewBox="0 0 1000 750" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="inset-shadow">
-          <feOffset dx="10" dy="10"/>                                                         <!-- Shadow Offset -->
-          <feGaussianBlur stdDeviation="10"  result="offset-blur"/>                           <!-- Shadow Blur -->
-          <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/> <!-- Invert the drop shadow to create an inner shadow -->
-          <feFlood flood-color="black" flood-opacity="1" result="color"/>                     <!-- Color & Opacity -->
-          <feComposite operator="in" in="color" in2="inverse" result="shadow"/>               <!-- Clip color inside shadow -->
-          <feComponentTransfer in="shadow" result="shadow">                                   <!-- Shadow Opacity -->
-              <feFuncA type="linear" slope=".4"/>
-          </feComponentTransfer>
-          <!-- Put shadow over original object -->
-          <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
-    </filter>
-
     <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:rgb(92,142,236);stop-opacity:1" />
       <stop offset="100%" style="stop-color:rgb(94,201,216);stop-opacity:1" />
@@ -33,12 +20,12 @@
     transform="translate(-50,0)"/>
   <polygon id="slashPolygon" points="574,0 1000,0 1000,750 374,750" fill="url(#grad2)" />
   <polygon id="rightPolygon" points="624,0 1000,0 1000,750 424,750" fill="url(#grad1)" />
-  <polygon id="patternoverlay" points="0,0 1000,0 1000,750 0,750" fill="url(#dots)" />
+  <polygon id="patternOverlay" points="0,0 1000,0 1000,750 0,750" fill="url(#dots)" />
 
-  <path id="opentag" d="M400,225v46L296,374.7l104,103.7V525L250,374.7L400,225z"
+  <path id="openTag" d="M400,225v46L296,374.7l104,103.7V525L250,374.7L400,225z"
     fill="url('#grad2')" filter="url('#inset-shadow')"
     transform="translate(-50,0)"/>
-  <path id="closetag" d="M600,525v-46.6l104.3-103.7L600,271v-46l150,149.7L600,525z"
+  <path id="closeTag" d="M600,525v-46.6l104.3-103.7L600,271v-46l150,149.7L600,525z"
     fill="url('#grad1')" filter="url('#inset-shadow')"
     transform="translate(50,0)"/>
   Sorry, your browser does not support inline SVG.

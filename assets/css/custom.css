@@ -1,0 +1,106 @@
+/* Cutomizations of the Casper theme to easy the theme update task */
+
+/* Fix the logo display when injected the inline SVG markup */
+.blog-logo svg {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 38px;
+    padding: 1px 0 5px 0;
+    width: auto;
+}
+@media only screen and (max-width: 900px) {
+    .blog-logo svg {
+        padding: 4px 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .blog-logo svg {
+        height: 30px;
+    }
+}
+
+/* Fix the cover display when injected the inline SVG markup */
+.main-header .cover, .main-header .cover svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main-header .cover #openTag {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  -webkit-animation: bounce-left 4s 2s infinite;
+  animation: bounce-left 4s 2s infinite;
+}
+.main-header .cover #closeTag {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-animation: bounce-right 4s 2s infinite;
+  animation: bounce-right 4s 2s infinite;
+}
+
+/* ==========================================================================
+   12. Animations
+   ========================================================================== */
+
+@-webkit-keyframes bounce-left {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+    20% {
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
+    }
+    30% {
+        -webkit-transform: translateX(-55px);
+                transform: translateX(-55px);
+    }
+}
+@keyframes bounce-left {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+    40% {
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
+    }
+    60% {
+        -webkit-transform: translateX(-55px);
+                transform: translateX(-55px);
+    }
+}
+
+@-webkit-keyframes bounce-right {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+    }
+    20% {
+        -webkit-transform: translateX(60px);
+                transform: translateX(60px);
+    }
+    30% {
+        -webkit-transform: translateX(55px);
+                transform: translateX(55px);
+    }
+}
+@keyframes bounce-right {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+    }
+    40% {
+        -webkit-transform: translateX(60px);
+                transform: translateX(60px);
+    }
+    60% {
+        -webkit-transform: translateX(55px);
+                transform: translateX(55px);
+    }
+}
