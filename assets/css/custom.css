@@ -9,6 +9,7 @@
     height: 38px;
     padding: 1px 0 5px 0;
     width: auto;
+    fill: currentColor;
 }
 @media only screen and (max-width: 900px) {
     .blog-logo svg {
