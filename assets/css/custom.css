@@ -1,5 +1,9 @@
 /* Cutomizations of the Casper theme to easy the theme update task */
 
+/* ==========================================================================
+   Main Header (cover)
+   ========================================================================== */
+
 /* Fix the logo display when injected the inline SVG markup */
 .blog-logo svg {
     -webkit-box-sizing: border-box;
@@ -44,8 +48,32 @@
   animation: bounce-right 4s 2s infinite;
 }
 
+/* Social Icons */
+.social-icons {
+  margin-top: 1em;
+  color: #FFF;
+  font-size: 1.8em;
+}
+.social-icons a {
+  text-decoration: none;
+  color: #FFF;
+}
+.social-icons span {
+  padding: 0.4em;
+  border-radius: 40%;
+  transition: all 0.3s ease;
+}
+.social-icons span:hover {
+  background-color: #FFF;
+  color: black;
+}
+.social-icons .socicon-twitter:hover { color: #26A3D7; }
+.social-icons .socicon-mail:hover { color: #68ED40; }
+.social-icons .socicon-rss:hover { color: #FFAA00; }
+
+
 /* ==========================================================================
-   12. Animations
+   Animations
    ========================================================================== */
 
 @-webkit-keyframes bounce-left {
