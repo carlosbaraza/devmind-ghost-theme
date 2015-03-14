@@ -1,6 +1,6 @@
 {
-  "name": "CarlosBaraza.com-theme",
-  "version": "0.0.1",
+  "name": "devmind-ghost-theme",
+  "version": "0.1.0",
   "dependencies": {
     "svg-injector": "^1.1.2",
     "velocity-animate": "^1.2.2"
