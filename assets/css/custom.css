@@ -14,7 +14,28 @@
     padding: 1px 0 5px 0;
     width: auto;
     fill: currentColor;
+    transition: all 0.3s ease;
 }
+.blog-logo svg #gt, .blog-logo svg #brain {
+  transition: all 0.3s ease;
+  transform: translateX(-780px);
+}
+.blog-logo svg #mind {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+/* Set the logo animation when hover */
+.main-header a.blog-logo:hover {
+  color: #FFF;
+}
+.blog-logo:hover svg #gt, .blog-logo:hover svg #brain {
+  transform: translateX(0px);
+}
+.blog-logo:hover svg #mind {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 900px) {
     .blog-logo svg {
         padding: 4px 0;
