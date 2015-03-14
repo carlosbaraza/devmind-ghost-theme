@@ -24,9 +24,14 @@
   transition: all 0.3s ease;
   opacity: 0;
 }
+/* Fix bug with font color in the nav-bar from Author page in Casper theme */
+.author-head .main-nav.overlay a {
+  color: inherit;
+}
 
 /* Set the logo animation when hover */
-.main-header a.blog-logo:hover {
+.main-header.with-cover a.blog-logo:hover,
+.main-header.tag-head a.blog-logo:hover {
   color: #FFF;
 }
 .blog-logo:hover svg #gt, .blog-logo:hover svg #brain {
