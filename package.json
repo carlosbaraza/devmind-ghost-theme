@@ -2,6 +2,7 @@
   "name": "devmind-ghost-theme",
   "version": "0.1.0",
   "dependencies": {
+    "highlight.js": "^8.4.0",
     "svg-injector": "^1.1.2",
     "velocity-animate": "^1.2.2"
   }
