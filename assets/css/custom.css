@@ -23,7 +23,9 @@
 .main-header .logo-carlosbaraza #logo {
   -webkit-animation: logo-carlosbaraza-rotation 14s 2s infinite;
   animation: logo-carlosbaraza-rotation 14s 2s infinite;
-  transform-origin: 50%;
+  -webkit-transform-origin: 200px 200px 0px;
+  -moz-transform-origin: 200px 200px 0px;
+  transform-origin: 200px 200px 0px;
 }
 @-webkit-keyframes logo-carlosbaraza-rotation {
     0% {
