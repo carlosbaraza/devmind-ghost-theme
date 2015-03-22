@@ -4,6 +4,45 @@
    Main Header (cover)
    ========================================================================== */
 
+/* LOGO CARLOS BARAZA */
+.main-header .logo-carlosbaraza {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.main-header .logo-carlosbaraza svg {
+  fill: currentColor;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+.main-header.with-cover .page-title {
+  display: none;
+}
+
+/* Carlos baraza logo hover animation */
+.main-header .logo-carlosbaraza #logo {
+  transition: all 0.3s ease;
+  transform-origin: 50%;
+}
+.main-header .logo-carlosbaraza:hover #logo {
+  /*transform: rotateZ(-110deg);*/
+  transform: rotateZ(70deg);
+}
+.main-header .logo-carlosbaraza #logo-left,
+.main-header .logo-carlosbaraza #logo-right,
+.main-header .logo-carlosbaraza #logo-right-noweb {
+  transition: all 0.3s ease;
+}
+.main-header .logo-carlosbaraza:hover #logo-left {
+  transform: translate(-15px, 41px);
+}
+.main-header .logo-carlosbaraza:hover #logo-right {
+  transform: translate(0px,-47px);
+}
+.main-header .logo-carlosbaraza:hover #logo-right-noweb {
+  opacity: 0;
+}
+
 /* Fix the logo display when injected the inline SVG markup */
 .blog-logo svg {
     -webkit-box-sizing: border-box;
@@ -30,6 +69,7 @@
 }
 
 /* Set the logo animation when hover */
+.main-header.with-cover,
 .main-header.with-cover a.blog-logo:hover,
 .main-header.tag-head a.blog-logo:hover {
   color: #FFF;

@@ -23,6 +23,7 @@
         // Inject the SVG inline markup instead of the SVG image
         SVGInjector($(".cover img"));
         SVGInjector($(".blog-logo img"));
+        SVGInjector($(".logo-carlosbaraza img"));
 
     });
 
