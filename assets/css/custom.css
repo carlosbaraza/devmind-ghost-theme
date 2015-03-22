@@ -222,6 +222,7 @@
 }
 .blog-logo svg #gt, .blog-logo svg #brain {
   transition: all 0.3s ease;
+  -webkit-transform: translateX(-780px);
   transform: translateX(-780px);
 }
 .blog-logo svg #mind {
@@ -240,6 +241,7 @@
   color: #FFF;
 }
 .blog-logo:hover svg #gt, .blog-logo:hover svg #brain {
+  -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
 .blog-logo:hover svg #mind {
