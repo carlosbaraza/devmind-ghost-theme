@@ -19,28 +19,103 @@
   display: none;
 }
 
-/* Carlos baraza logo hover animation */
+/* Carlos Baraza logo animation */
 .main-header .logo-carlosbaraza #logo {
-  transition: all 0.3s ease;
+  -webkit-animation: logo-carlosbaraza-rotation 14s 2s infinite;
   transform-origin: 50%;
 }
-.main-header .logo-carlosbaraza:hover #logo {
-  /*transform: rotateZ(-110deg);*/
-  transform: rotateZ(70deg);
+@-webkit-keyframes logo-carlosbaraza-rotation {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+    5%{
+        -webkit-transform: rotateZ(-110deg);
+                transform: rotateZ(-110deg);
+    }
+    30% {
+        -webkit-transform: rotateZ(-110deg);
+                transform: rotateZ(-110deg);
+    }
+    35% {
+        -webkit-transform: rotateZ(70deg);
+                transform: rotateZ(70deg);
+    }
+    60% {
+        -webkit-transform: rotateZ(70deg);
+                transform: rotateZ(70deg);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
 }
-.main-header .logo-carlosbaraza #logo-left,
-.main-header .logo-carlosbaraza #logo-right,
+.main-header .logo-carlosbaraza #logo-left {
+  -webkit-animation: logo-carlosbaraza-left 14s 2s infinite;
+}
+@-webkit-keyframes logo-carlosbaraza-left {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+    5%{
+        -webkit-transform: translate(-15px, 41px);
+                transform: translate(-15px, 41px);
+    }
+    60% {
+        -webkit-transform: translate(-15px, 41px);
+                transform: translate(-15px, 41px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+}
+.main-header .logo-carlosbaraza #logo-right {
+  -webkit-animation: logo-carlosbaraza-right 14s 2s infinite;
+}
+@-webkit-keyframes logo-carlosbaraza-right {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+    5%{
+        -webkit-transform: translate(0px,-47px);
+                transform: translate(0px,-47px);
+    }
+    60% {
+        -webkit-transform: translate(0px,-47px);
+                transform: translate(0px,-47px);
+    }
+    65% {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+}
 .main-header .logo-carlosbaraza #logo-right-noweb {
-  transition: all 0.3s ease;
+  -webkit-animation: logo-carlosbaraza-right-noweb 14s 2s infinite;
 }
-.main-header .logo-carlosbaraza:hover #logo-left {
-  transform: translate(-15px, 41px);
-}
-.main-header .logo-carlosbaraza:hover #logo-right {
-  transform: translate(0px,-47px);
-}
-.main-header .logo-carlosbaraza:hover #logo-right-noweb {
-  opacity: 0;
+@-webkit-keyframes logo-carlosbaraza-right-noweb {
+    0% {
+        -webkit-opacity: 1;
+                opacity: 1;
+    }
+    30%{
+        -webkit-opacity: 1;
+                opacity: 1;
+    }
+    35%{
+        -webkit-opacity: 0;
+                opacity: 0;
+    }
+    60% {
+        -webkit-opacity: 0;
+                opacity: 0;
+    }
+    65% {
+        -webkit-opacity: 1;
+                opacity: 1;
+    }
 }
 
 /* Fix the logo display when injected the inline SVG markup */
