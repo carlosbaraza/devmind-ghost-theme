@@ -23,7 +23,9 @@
         // Inject the SVG inline markup instead of the SVG image
         SVGInjector($(".cover img"));
         SVGInjector($(".blog-logo img"));
-        SVGInjector($(".logo-carlosbaraza img"));
+        SVGInjector($(".logo-carlosbaraza img"), {}, function(totalInjected){
+          $(".logo-carlosbaraza svg")[0].style.opacity = 1;
+        });
 
     });
 
