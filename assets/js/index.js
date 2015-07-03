@@ -9,7 +9,6 @@
     var $document = $(document);
 
     $document.ready(function () {
-
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
@@ -21,12 +20,19 @@
         });
 
         // Inject the SVG inline markup instead of the SVG image
-        SVGInjector($(".cover img"));
-        SVGInjector($(".blog-logo img"));
-        SVGInjector($(".logo-carlosbaraza img"), {}, function(totalInjected){
+        SVGInjector($('.cover img'));
+        SVGInjector($('.blog-logo img'));
+        SVGInjector($('.logo-carlosbaraza img'), {}, function(totalInjected) {
           $(".logo-carlosbaraza svg")[0].style.opacity = 1;
-        });
 
+          // Workaround to fix tricky bug in mobile forcing repaint.
+          // TODO: Find a better fix
+          var el = document.getElementById('content');
+          var display = el.style.display;
+          el.style.display = 'none';
+          var trick = el.offsetHeight;
+          el.style.display = display;
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis
